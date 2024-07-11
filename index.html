@@ -58,6 +58,7 @@ input[type="submit"]:hover {
     <div class="form-container">
         <h2>Restricted Access</h2>
         <p>Please enter the password to access the pop-up removal guide.</p>
+	<p>Password hint: The command to list all files, including hidden ones, in detail.</p>
         <form method="GET" action="https://dansylvain.github.io/web/removal_guide.html">
             <input type="password" name="password" placeholder="Enter password" required>
             <br>
@@ -71,13 +72,11 @@ input[type="submit"]:hover {
 document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault();
     var password = document.querySelector('input[name="password"]').value;
-    if (password === 'gvigney') {
+    if (password === 'ls -la' || password === 'ls -l -a' || password === 'ls -a -l') {
         window.location.href = "https://dansylvain.github.io/web/removal_guide.html";
-    } else if (password === 'mcombeau') {
-        alert('I like this one. But no, try again.');
-    } else if (password === 'prossi') {
-        alert('Great stuff. But no, try again.');
-	} else	
+    } else if (password === 'ls -a' || password === 'ls -l') {
+        alert('Good try, but there's someting missing...');
+    } else 	
 	{
         alert('Incorrect password. Please try again.');
     }
