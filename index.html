@@ -68,19 +68,20 @@ input[type="submit"]:hover {
     </div>
 </div>
 
-<script>
-document.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    var password = document.querySelector('input[name="password"]').value;
-    if (password === 'ls -la' || password === 'ls -l -a' || password === 'ls -a -l') {
-        window.location.href = "https://dansylvain.github.io/web/removal_guide.html";
-    } else if (password === 'ls -a' || password === 'ls -l') {
-        alert('Good try, but there's someting missing...');
-    } else 	
-	{
-        alert('Incorrect password. Please try again.');
-    }
-});
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function() {
+		document.querySelector('form').addEventListener('submit', function(e) {
+			e.preventDefault();
+			var password = document.querySelector('input[name="password"]').value;
+			if (password === 'ls -al' || password === 'ls -la' || password === 'ls -l -a' || password === 'ls -a -l') {
+				window.location.href = "https://codekarma42.github.io/removal_guide.html";
+			} else if (password === 'ls -a' || password === 'ls -l') {
+				alert('Good try, but there\'s something missing...');
+			} else {
+				alert('Incorrect password. Please try again.');
+			}
+		});
+	});
 </script>
 
 </body></html>
