@@ -1,0 +1,87 @@
+<html><head><base href="https://websim.ai"/><title>SecureTech Solutions - Password Required</title><style>
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+    color: #f0f0f0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.logo {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(0,255,0,0.5);
+}
+.form-container {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,255,0,0.3);
+    text-align: center;
+}
+input[type="password"] {
+    width: 250px;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+}
+input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #00ff00;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+input[type="submit"]:hover {
+    background: #00cc00;
+}
+.message {
+    margin-top: 20px;
+    font-style: italic;
+}
+</style></head><body>
+<div class="container">
+    <div class="logo">SecureTech Solutions</div>
+    <div class="form-container">
+        <h2>Restricted Access</h2>
+        <p>Please enter the password to access the pop-up removal guide.</p>
+        <form method="GET" action="https://dansylvain.github.io/web/removal_guide.html">
+            <input type="password" name="password" placeholder="Enter password" required>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        <p class="message">Unauthorized access attempts will be logged and reported.</p>
+    </div>
+</div>
+
+<script>
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var password = document.querySelector('input[name="password"]').value;
+    if (password === 'gvigney') {
+        window.location.href = "https://dansylvain.github.io/web/removal_guide.html";
+    } else if (password === 'mcombeau') {
+        alert('I like this one. But no, try again.');
+    } else if (password === 'prossi') {
+        alert('Great stuff. But no, try again.');
+	} else	
+	{
+        alert('Incorrect password. Please try again.');
+    }
+});
+</script>
+
+</body></html>
