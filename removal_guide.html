@@ -78,19 +78,19 @@ code {
 		<h3>Step 2: Navigate to the Processes Tab</h3>
 		<p>Once the System Monitoring Center is open, go to the <strong>Processes</strong> tab. This tab shows a list of all running processes on your system.</p>
 	
-		<h3>Step 3: Identify the Pop-Up Script</h3>
-		<p>Look through the list of processes to find the one named <code>pop_up.sh</code>. This is the script causing the pop-ups.</p>
+		<h3>Step 3: Identify the bash process</h3>
+		<p>Look through the list of processes to find the one named <code>bash</code>. This is the process causing the pop-ups.</p>
 	
 		<h3>Step 4: Kill the Pop-Up Script</h3>
 		<p>Once you've identified the process, right-click on it and select <strong>Kill</strong> or <strong>End Process</strong>. This will stop the script and remove the pop-ups.</p>
 	
 		<div class="note">
-			<strong>Note:</strong> If you are unable to find the <code>pop_up.sh</code> process, try sorting the processes by CPU usage or memory usage to locate the script more easily.
+			<strong>Note:</strong> If you are unable to find the <code>bash</code> process, try sorting the processes by CPU usage or memory usage to locate the script more easily.
 		</div>
 	
 		<h3>Alternative Solution: Use Command Line</h3>
 		<p>If you prefer using the command line, open a terminal and type the following command to find the process ID (PID) of the script:</p>
-		<pre><code>ps aux | grep pop_up.sh</code></pre>
+		<pre><code>ps aux | grep bash</code></pre>
 		<p>Then, use the <code>kill</code> command followed by the PID:</p>
 		<pre><code>kill [PID]</code></pre>
 	
